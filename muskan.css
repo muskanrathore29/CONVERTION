@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(n\ copy.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container {
+    background-color:lightsalmon;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+    background-image: url(img1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    /* color:darkgreen; */
+    color: darkorange;
+
+    margin-bottom: 20px;
+    font-size: 25px;
+    word
+}
+
+label {
+    font size: 20%; 
+    margin-top: 10px;
+    border-radius: 10%;
+    
+    
+    
+    
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 8px;
+    margin-bottom: 12px;
+    border: 1px solid lightseagreen;
+    border-radius: 4px;
+    font-size: 14px;
+    /* background-image: url(img1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; */
+    
+}
+
+button {
+    background-color: lightseagreen;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+input[type="text"] {
+    text-align: center;
+    color: darkblue;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 500px) {
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        color: darkblue;
+}
+}

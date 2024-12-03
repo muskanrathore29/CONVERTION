@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="muskan.css">
+</head>
+<body>
+    <div class="container">
+        <h1>NUMBER BASED CONVERTION</h1>
+        <label style="color:white;">NUMBER:</label>
+        <input id="d1" type="text" placeholder="Enter number" /><br>
+
+        <div class="form-group">
+            <label style="color: azure;">FROM:</label>
+            <select id="finp">
+                <!-- <h1>subhas</h1> -->
+                <option value="b">Binary Number</option>
+                <option value="o">Octal Number</option>
+                <option value="h">Hexadecimal Number</option>
+                <option value="d">Decimal Number</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label style="color: white;">TO:</label>
+            <select id="tinp">
+                <option value="b">Binary Number</option>
+                <option value="o">Octal Number</option>
+                <option value="h">Hexadecimal Number</option>
+                <option value="d">Decimal Number</option>
+            </select>
+        </div>
+
+        <button type="button" onclick="convert()">Convert</button>
+
+        <br><br>
+
+        <label style="color: azure;">RESULT:</label>
+        <input type="text" id="res" readonly />
+    </div>
+    <script>
+        function convert() {
+    let num = document.getElementById("d1").value.trim();
+    let f_choose_value = document.getElementById("finp").value;
+    let t_choose_value = document.getElementById("tinp").value;
+    let dec_num;
+    let result = "";
+
+    if (f_choose_value === "b") {
+        dec_num = parseInt(num, 2);
+    } else if (f_choose_value === "o") {
+        dec_num = parseInt(num, 8);
+    } else if (f_choose_value === "h") {
+        dec_num = parseInt(num, 16);
+    } else if (f_choose_value === "d") {
+        dec_num = parseInt(num, 10);
+    }
+
+    if (t_choose_value === "b") {
+        result = dec_num.toString(2);  
+    } else if (t_choose_value === "o") {
+        result = dec_num.toString(8);  
+    } else if (t_choose_value === "h") {
+        result = dec_num.toString(16).toUpperCase();  
+    } else if (t_choose_value === "d") {
+        result = dec_num.toString(10);  
+    }
+
+    document.getElementById("res").value=result;
+}
+    </script>
+</body>
+</html>
